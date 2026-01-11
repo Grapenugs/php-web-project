@@ -1,0 +1,129 @@
+1. Find the addresses of all houses currently listed.
+
+Database changed
++----------------+
+| address        |
++----------------+
+| 100 Maple St   |
+| 200 Oak Ave    |
+| 300 Pine Rd    |
+| 400 Cedar Ln   |
+| 500 Birch Blvd |
++----------------+
+5 rows in set (0.001 sec)
+
+
+2. Find the addresses and MLS numbers of all houses currently listed
++----------------+-----------+
+| address        | mlsNumber |
++----------------+-----------+
+| 100 Maple St   |      9001 |
+| 200 Oak Ave    |      9002 |
+| 300 Pine Rd    |      9003 |
+| 400 Cedar Ln   |      9004 |
+| 500 Birch Blvd |      9007 |
++----------------+-----------+
+5 rows in set (0.000 sec)
+
+
+3. Find the addresses of all 3-becroom, 2-bathroom houses currently listed
++----------------+
+| address        |
++----------------+
+| 100 Maple St   |
+| 200 Oak Ave    |
+| 500 Birch Blvd |
++----------------+
+3 rows in set (0.001 sec)
+
+
+4. Find the addresses and prices of all 3-bedroom, 2-bathroom houses with
+prices in the range $100,000 to $250,000, with the results shown in
+descending order of price.
++--------------+--------+
+| address      | price  |
++--------------+--------+
+| 200 Oak Ave  | 235000 |
+| 100 Maple St | 185000 |
++--------------+--------+
+2 rows in set (0.001 sec)
+
+
+5. Find the addresses and prices of all business properties that are
+advertised as office space in descending order of price
++---------------+--------+
+| address       | price  |
++---------------+--------+
+| 600 Market St | 500000 |
+| 400 Cedar Ln  | 450000 |
+| 200 Oak Ave   | 235000 |
++---------------+--------+
+3 rows in set (0.001 sec)
+
+
+6. Find all the ids, names and phones of all agents, together with the
+names of their firms and the dates when they started
++---------+-------------+--------------+--------------------+-------------+
+| agentId | name        | phone        | firm_name          | dateStarted |
++---------+-------------+--------------+--------------------+-------------+
+|       1 | Agent Alice | 555-111-1111 | Sunshine Realty    | 2020-01-15  |
+|     102 | Agent Bob   | 555-222-2222 | Capital Homes      | 2019-03-20  |
+|     103 | Agent Carol | 555-333-3333 | Northern Brokers   | 2021-07-10  |
+|     104 | Agent Dan   | 555-444-4444 | Premier Properties | 2018-11-30  |
+|     105 | Agent Erin  | 555-555-5555 | Value Realty       | 2022-05-05  |
++---------+-------------+--------------+--------------------+-------------+
+5 rows in set (0.001 sec)
+
+
+7. Find all the properties currently listed by agent with id “001”
+(or some other suitable id).
++----------------+--------+
+| address        | price  |
++----------------+--------+
+| 100 Maple St   | 185000 |
+| 200 Oak Ave    | 235000 |
+| 500 Birch Blvd | 325000 |
++----------------+--------+
+3 rows in set (0.001 sec)
+
+
+8. Find all Agent.name-Buyer.name pairs where the buyer works with the
+agent, sorted alphabetically by Agent.name
++-------------+------------+
+| agent_name  | buyer_name |
++-------------+------------+
+| Agent Alice | Buyer Tom  |
+| Agent Alice | Buyer Rick |
+| Agent Bob   | Buyer Tom  |
+| Agent Bob   | Buyer Sue  |
+| Agent Carol | Buyer Rick |
+| Agent Dan   | Buyer Jane |
+| Agent Erin  | Buyer Lex  |
++-------------+------------+
+7 rows in set (0.001 sec)
+
+
+9. For each agent, find the total number of buyers currently working
+with that agent, (ex: the output should be Agent.id-count pairs)
++---------+--------------+
+| agentId | total_buyers |
++---------+--------------+
+|       1 |            2 |
+|     102 |            2 |
+|     103 |            1 |
+|     104 |            1 |
+|     105 |            1 |
++---------+--------------+
+5 rows in set (0.001 sec)
+
+
+10. For some buyer that is interested in a house, where the buyer is
+identified by an id (e.g., “001”), find all houses that meet the buyer’s
+preferences, with the results shown in descending order of price
++--------------+--------+
+| address      | price  |
++--------------+--------+
+| 200 Oak Ave  | 235000 |
+| 100 Maple St | 185000 |
++--------------+--------+
+2 rows in set (0.001 sec)
